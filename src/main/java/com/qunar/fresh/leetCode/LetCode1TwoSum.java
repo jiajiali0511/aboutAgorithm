@@ -5,10 +5,10 @@ import com.alibaba.fastjson.JSON;
 /**
  * Created by ljiajiali on 17-10-20.
  */
-public class TwoSum {
+public class LetCode1TwoSum {
     public static void main(String[] args) {
         int[] data = {1, 2, 4, 5, 7, 10, 20, 21, 22};
-        int[] index = getSumIndex(data, 50);
+        int[] index = getSumIndex(data, 30);
         System.out.println(JSON.toJSON(index));
     }
 
