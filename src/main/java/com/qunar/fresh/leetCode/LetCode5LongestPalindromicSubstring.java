@@ -7,7 +7,7 @@ package com.qunar.fresh.leetCode;
 public class LetCode5LongestPalindromicSubstring {
     public static void main(String[] args) {
         System.out.println(getLongestPalindromicString(null));
-        System.out.println(getPalindromicStrUsingDynamicPlanningf("ab"));
+        System.out.println(getPalindromicStrUsingDynamicPlanningf("abcaac"));
     }
 
     public static String getLongestPalindromicString(String str) {
@@ -49,7 +49,7 @@ public class LetCode5LongestPalindromicSubstring {
 
         boolean[][] plan = new boolean[str.length()][str.length()];
         int maxLen = 0;
-        
+
         for (int i = str.length() - 1; i >= 0; i--) {
             for (int j = i; j < str.length(); j++) {
                 if (str.charAt(i) == str.charAt(j) && (j - i < 2 || plan[i + 1][j - 1])) {
